@@ -1,0 +1,36 @@
+{
+  "name": "monte_carlo_pi",
+  "title": "Parallelized Calculation of Pi using Monte Carlo Simulations",
+  "summary": "Monte Carlo sampling of points in a unit square space is performed to estimate the value of pi. This program is parallelized on the DNAnexus cloud.",
+  "dxapi": "1.0.0",
+  "version": "0.0.1",
+  "categories": [],
+  "inputSpec": [
+    {
+      "name": "nSimulations",
+      "label": "Target number of simulations (ie random points sampled) by the program in the unit square space (default = 100M).",
+      "class": "int",
+      "optional": true,
+      "default": 100000000
+    },
+    {
+      "name": "nWorkers",
+      "label": "Number of workers to be spawned (default=20).",
+      "class": "int",
+      "optional": true,
+      "default": 20
+    }
+  ],
+  "outputSpec": 
+  [
+    {
+      "name": "estimatedPi",
+      "class": "float"
+    }
+  ],
+  "runSpec": {
+    "interpreter": "python2.7",
+    "file": "src/monte_carlo_pi.py"
+  },
+  "authorizedUsers": []
+}
