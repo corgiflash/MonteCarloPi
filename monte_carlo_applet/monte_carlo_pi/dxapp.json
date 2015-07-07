@@ -30,7 +30,15 @@
   ],
   "runSpec": {
     "interpreter": "python2.7",
-    "file": "src/monte_carlo_pi.py"
+    "file": "src/monte_carlo_pi.py",
+    "systemRequirements": {
+      "process": {
+        "instanceType": "mem1_hdd2_x8"
+      },
+      "*": {
+        "instanceType": "mem2_hdd2_x2"
+      }
+    }
   },
   "authorizedUsers": []
 }
